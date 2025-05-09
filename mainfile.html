@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Tamari's ePortfolio</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --white: #ffffff;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+        
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        nav a.active {
+            background-color: var(--primary-color);
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin: 1.5rem 0 1rem 0;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .artifact {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        .artifact:last-child {
+            border-bottom: none;
+        }
+        
+        .artifact-content {
+            margin: 1.5rem 0;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+        
+        .button:hover {
+            background-color: var(--primary-color);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Nathan Tamari</h1>
+            <p class="subtitle">ePortfolio | Academic & Professional Journey</p>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="#welcome" class="nav-link active">Welcome</a></li>
+                <li><a href="#introduction" class="nav-link">Video Introduction</a></li>
+                <li><a href="#artifacts" class="nav-link">Artifacts</a></li>
+                <li><a href="#reflection" class="nav-link">Reflection</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="welcome">
+            <h2>Welcome to My ePortfolio</h2>
+            <p>Welcome to my academic and professional portfolio. This collection represents the culmination of my academic journey, showcasing my skills, knowledge, and growth across various disciplines and projects. As a student passionate about both technology and communication, I've designed this portfolio to highlight how I approach complex problems, communicate technical concepts, and apply my learning in practical contexts.</p>
+            
+            <p>This portfolio contains three carefully selected artifacts that demonstrate my technical abilities, communication skills, and creative problem-solving approach. Through my video analysis of programming patterns, explanation of data structures, and personal website development, you'll gain insight into how I integrate theoretical knowledge with practical application. The navigation is intuitive—simply use the menu above to explore different sections, from my video introduction to detailed artifacts and my reflective essay. I invite you to explore these elements to understand both what I've accomplished and how my unique perspective shapes my academic and professional identity.</p>
+        </section>
+        
+        <section id="introduction">
+            <h2>Video Introduction</h2>
+            <p>In this brief introduction, I share my academic background, core skills, and professional aspirations. The video provides context for the artifacts presented in this portfolio and offers a glimpse into my approach to learning and problem-solving.</p>
+            
+            <div class="video-container">
+                <!-- Placeholder for your video introduction - replace the src with your YouTube embed link -->
+                <iframe id="intro-video" src="" title="Video Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section id="artifacts">
+            <h2>Portfolio Artifacts</h2>
+            
+            <div class="artifact">
+                <h3>Artifact 1: Israel Hiking Video</h3>
+                <div class="artifact-content">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/f0jrbw7sGfg" title="Programming Patterns Analysis" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="contextual-statement">
+                    <h4>Contextual Statement</h4>
+                   <p>This entertaining and spontaneous travel vlog follows a 20-mile hike with friends through the Kineret (Sea of Galilee) region in Israel. The video interweaves sweeping landscapes with unscripted, candid moments that highlight the experience of traveling with a group. The video is filled with shared humor, glimpses of exhaustion, cultural references, and much more. The tone is occasionally goofy, and occasionally reflective, with light editing and a bilingual mix of Hebrew and English to capture the experience uniquely. I used music such as classic Israeli songs as "Ammunition Hill" to underscore key moments and emphasize the cultural and emotional parts of the journey.
+
+                    This video features my skill at storytelling, video editing, and cultural immersion. By deflecting attention from a conventional narrative and toward mood and interaction, I created a work that is immersive and intimate. The casual production conceals intentional decisions regarding pacing, scene selection, and tone that resonate to maintain viewer engagement and convey a deeper sense of place and community. This work demonstrates my ability to capture real-world experience in new forms that blend humor, authenticity, and cross-cultural communication.</p>
+                </div>
+            </div>
+            
+            <div class="artifact">
+                <h3>Artifact 2: Senior Year Bahamas Trip Vlog</h3>
+                <div class="artifact-content">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/WJyBFiareS4" title="Data Structures Explanation" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="contextual-statement">
+                    <h4>Contextual Statement</h4>
+                    <p>This music-filled vlog chronicles the adventure of a senior tour to Atlantis in the Bahamas, mixing dreamlike humor with moments of seriousness and jubilation. The clip starts with frantic action shots, rapid cuts, and thumping music overtop hotel-room pranks and in-group jokes. As the vlog continues, it shifts to beach lounging, boat tours, and island dancing, all captured with a bare minimum of narration to preserve the natural high of the group. The shift in music from rap to tropical pop mirrors the shift in tone from aping humor to hazy nostalgia, cementing the spontaneous nature of the trip.
+
+This vlog illustrates my ability in sound storytelling, editing, and emotional contrast. I intentionally inserted raw, unscripted, cringeworthy, humorous, or heartwarming segments to capture the connectedness of our group and of closing a chapter in our lives. This artifact illustrates my awareness of mood-based storytelling, visual rhythm, and group dynamics, bringing fleeting memories into something lasting. It's a celebration of friendship and an display of how media can record and enhance shared moments.</p>
+                </div>
+            </div>
+            
+            <div class="artifact">
+                <h3>Artifact 3: Personal Website Development</h3>
+                <div class="artifact-content">
+                    <a href="https://nathantamari.com" target="_blank" class="button">Visit My Website</a>
+                </div>
+                <div class="contextual-statement">
+                    <h4>Contextual Statement</h4>
+                    <p>My own personal website, nathantamari.com, is the practical application of my web development capabilities and professional site that I've constructed, designed, and maintained. The artifact was constructed in an effort to establish a presence on the internet and to showcase my technical projects, professional work, and creative endeavors. As a standalone project, it shows my technical abilities as well as my familiarity with successful personal branding on the internet.</p>
+                    
+                    <p>This piece of work exhibits several of my major areas of expertise. Foremost, it illustrates my proficiency with web technology such as HTML, CSS, JavaScript, and responsive design standards—skills garnered from both higher learning and personal development. My use of simple, intuitive presentation attests to my knowledge in the field of user experience design and information architecture, with priority placed on simplicity and ease of access. Aside from the technical skills, this site demonstrates my skill in curating and presenting professional information in an effective manner, choosing and arranging information to convey my experiences and skills to prospective employers or collaborators. The experience of planning, designing, developing, and continuously refining this site has enhanced my project management skills and attention to detail. Unlike course work with predetermined parameters, this independent project enabled me to have my own content, design, and functionality decisions—demonstrating initiative and independence of work. This artifact not only demonstrates what I can produce, but how I present myself professionally online.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="reflection">
+            <h2>Reflective Essay</h2>
+           <p> Reading through the work I've assembled in this portfolio, there's one overwhelming theme that leaps out: I've always been trying to bridge the gap between expression and experience. Whether it's code, editing a video, or constructing a website, I've come to see that I value clarity, connection, and creativity above all else. These are values that show up anywhere, from my goofy travel vlogs to my obsessively coded personal site. Through this exercise of looking back at my own work, I could appreciate how those values aren't distinct from who I am.
+
+            I was the one in my family who was always explaining things: tech to my parents, ideas to my classmates, plans to my friends. It helped me realize that I enjoy not just doing something, but also sharing it in a form where other people feel like they're living through it as well. That is what compelled me to make the Israel hiking video. At its surface level, it might appear to be some friends messing around on a path. But to me, it was a chance to get to do a piece about community, culture, and burnout (the good stuff). I selected the songs, the pace, the proportion of raw moments and emotional moments—all for the purposes of taking people on that journey. It's relaxed and conversational, yet deep. This kind of storytelling taught me that even relaxed content could be both planned and important if done deliberately. And then there's the vlog on the Bahamas trip, which, while presented in the same format, brought out another part of me. I was more focused this time with transitions, both video and life. We were all teetering on the edge of finishing high school, closing one book, having no clue what the next was going to be. So I let that mix of emotion and adrenaline drive the edit. The way the music shifts halfway through, the shift from frenetic franticness to slower shots, and that was intentional. I wasn't just making a highlight reel. I was trying to convey a feeling: the blur of change, the bittersweetness of youth, and the importance of holding on to moments before they slip away. In hindsight, that video showed me how much I value reflection and emotional honesty, even though I package it in irony. My site, though, is identity-building rather than nostalgia. I built it as a sort of virtual resume, something representative of what I can do technically. But it's also where I get to share my story. Unlike a résumé, the website gave me the freedom to speak through design choices, organization, and even what projects I wanted to highlight. Building it was an exercise in patience, iteration, and considering audience needs, things that apply far beyond the realm of web development. It was an applied problem, not a grade-focused exercise, but a self-directed one where I needed to set my own objectives and overcome my own challenges.
+            Looking back, looking at the three artifacts as a group, I notice how I love building things that are functional but have meaning. Whether it's manipulating code or working with video, I'm always asking myself: What experience do I want to have? What feeling do I want someone to take away from it? These aren't considerations of art, these are hugely practical. In technology, they are synonymous with good UX. In group settings, they help in cooperation and presentation. In life, they make me reflect before doing something and look at other people's perspectives. As I move out into my working life, I plan to keep bringing together these aspects of myself, the communicator and the builder, the storyteller and the technician. These artifacts don't just say what I've done. They say how I think and what I care about: creativity, connection, and clarity. And in a world that is inclined to separate the technical from the human, I want to be one who brings them back together.
+            </p>
+          </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Nathan Tamari | ePortfolio</p>
+        </div>
+    </footer>
+
+    <script>
+        // Active navigation highlighting
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Update active class
+                navLinks.forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Add your YouTube introduction video here
+        document.getElementById('intro-video').src = ""; // Add your YouTube embed URL here
+    </script>
+</body>
+</html>
